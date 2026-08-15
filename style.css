@@ -230,6 +230,31 @@ header {
     border: none;
 }
 
+/* 活動写真ギャラリー */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 50px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    display: block;
+    border: 1px solid #eae6e1;
+}
+
+@media (max-width: 600px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+    .photo-gallery img {
+        height: 220px;
+    }
+}
+
 /* ナビゲーション（複数ページ対応・折り返し可） */
 .nav-links {
     flex-wrap: wrap;
@@ -339,12 +364,83 @@ header {
     font-size: 15px;
 }
 
+/* ニュース一覧 */
+.news-list {
+    list-style: none;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.news-item {
+    display: flex;
+    gap: 24px;
+    padding: 24px 4px;
+    border-bottom: 1px solid #eae6e1;
+    font-size: 15px;
+}
+
+.news-date {
+    color: #8c867b;
+    font-family: 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.news-body {
+    color: #4a4641;
+}
+
+@media (max-width: 600px) {
+    .news-item {
+        flex-direction: column;
+        gap: 6px;
+    }
+}
+
+/* ヘッダーの「参加を申し込む」CTA */
+.nav-links a.nav-cta {
+    color: #4a4641;
+    border: 1px solid #4a4641;
+    padding: 6px 16px;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.nav-links a.nav-cta:hover {
+    background-color: #4a4641;
+    color: #faf9f6;
+}
+
 /* フッター */
 footer {
     background-color: #faf9f6;
     color: #8c867b;
     text-align: center;
-    padding: 40px 0;
+    padding: 50px 20px;
     font-size: 12px;
     border-top: 1px solid #eae6e1;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 28px;
+    margin: 0 0 24px;
+    padding: 0;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #8c867b;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #4a4641;
 }
