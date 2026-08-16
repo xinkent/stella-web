@@ -399,6 +399,97 @@ header {
     }
 }
 
+/* ハンバーガーメニュー（トグルボタン） */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    width: 24px;
+    height: 1.5px;
+    background-color: #4a4641;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.nav-toggle.open span:nth-child(1) {
+    transform: translateY(6.5px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.open span:nth-child(3) {
+    transform: translateY(-6.5px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 16px 24px;
+        position: relative;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background-color: #faf9f6;
+        border-bottom: 1px solid #eae6e1;
+        padding: 8px 0;
+        z-index: 100;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px 24px;
+        font-size: 15px;
+    }
+
+    .nav-links a.active {
+        border-bottom: none;
+        padding-bottom: 14px;
+        color: #4a4641;
+    }
+
+    /* モバイルではCTAも通常のリンク表示に揃える */
+    .nav-links a.nav-cta {
+        border: none;
+        border-radius: 0;
+        padding: 14px 24px;
+    }
+
+    .nav-links a.nav-cta:hover {
+        background-color: transparent;
+        color: #4a4641;
+    }
+}
+
 /* ヘッダーの「参加を申し込む」CTA */
 .nav-links a.nav-cta {
     color: #4a4641;
