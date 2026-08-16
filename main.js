@@ -1,4 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // ハンバーガーメニューの開閉（モバイル）
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('open', isOpen);
+            navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+    }
+
     // FAQ アコーディオンの開閉
     const questions = document.querySelectorAll('.faq-question');
 
