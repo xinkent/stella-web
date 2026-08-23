@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stella (ステラ) | バドミントンサークル</title>
+    <meta name="google-site-verification" content="PTTEZDJO3YwJawEKVb52B5Cx1qwniRlDserinzVov4s" />
+    <title>横浜の社会人バドミントンサークル Stella (ステラ) | 神奈川・長津田</title>
+    <meta name="description" content="Stella (ステラ) は横浜市（神奈川県）長津田で週末に活動している社会人バドミントンサークルです。20〜30代・中級者中心のメンバーで、毎週日曜に長津田小学校の体育館で練習しています。メンバー募集中。">
+    <link rel="canonical" href="https://stella-badminton.netlify.app/">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsClub",
+      "name": "Stella (ステラ)",
+      "description": "横浜市長津田で活動する社会人バドミントンサークル",
+      "sport": "バドミントン",
+      "url": "https://stella-badminton.netlify.app/",
+      "areaServed": "横浜市, 神奈川県",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "横浜市緑区長津田",
+        "addressRegion": "神奈川県",
+        "addressCountry": "JP"
+      },
+      "location": {
+        "@type": "Place",
+        "name": "横浜市立長津田小学校"
+      }
+    }
+    </script>
 </head>
 <body>
     <!-- ヘッダー -->
@@ -27,7 +51,56 @@
         <div class="hero-content">
             <h1>play badminton, stellarly.</h1>
             <p>なんどだって羽ばたけるさ、君だって。</p>
-            <a href="apply.html" class="btn">参加を申し込む</a>
+            <a href="apply.html" class="btn btn-primary">参加を申し込む</a>
+        </div>
+    </section>
+
+    <!-- コンセプト -->
+    <section class="section section-narrow">
+        <h2 class="section-title">concept</h2>
+        <p class="section-desc">横浜の社会人バドミントンサークル Stella (ステラ)</p>
+        <p class="lead">
+            少しだけ自分に戻る時間を
+        </p>
+        <p class="lead-text">
+            余暇を充実させよう。もっと楽しもう。<br>
+            ここでの経験がみなさんの人生を変えるきっかけになることを祈っています。
+        </p>
+        <p class="section-note">
+            神奈川県横浜市（長津田）で毎週日曜日に活動しています。<a href="about.html">私たちについて詳しく見る</a>
+        </p>
+    </section>
+
+    <!-- ギャラリー -->
+    <section class="section bg-light">
+        <h2 class="section-title">gallery</h2>
+        <p class="section-desc">活動の様子</p>
+
+        <div class="carousel">
+            <button class="carousel-arrow prev" type="button" aria-label="前へ">&#8249;</button>
+            <div class="carousel-track">
+                <button class="carousel-item" type="button" data-full="images/gallery-1.png"><img src="images/gallery-1.png" alt="横浜のバドミントンサークル Stella の活動風景 1" loading="lazy"></button>
+                <button class="carousel-item" type="button" data-full="images/gallery-2.png"><img src="images/gallery-2.png" alt="横浜のバドミントンサークル Stella の活動風景 2" loading="lazy"></button>
+                <button class="carousel-item" type="button" data-full="images/gallery-3.jpg"><img src="images/gallery-3.jpg" alt="横浜のバドミントンサークル Stella の活動風景 3" loading="lazy"></button>
+                <button class="carousel-item" type="button" data-full="images/gallery-4.png"><img src="images/gallery-4.png" alt="ダブルスを楽しむメンバーの様子" loading="lazy"></button>
+                <button class="carousel-item" type="button" data-full="images/gallery-5.png"><img src="images/gallery-5.png" alt="コートに置かれたラケットとタオル、飲み物" loading="lazy"></button>
+            </div>
+            <button class="carousel-arrow next" type="button" aria-label="次へ">&#8250;</button>
+        </div>
+        <p class="section-note">画像をクリックすると拡大表示されます。</p>
+    </section>
+
+    <!-- 問い合わせ・申し込みへの誘導 -->
+    <section class="section section-narrow">
+        <h2 class="section-title">contact</h2>
+        <p class="section-desc">一緒にバドミントンをしませんか？</p>
+        <p class="lead-text">
+            見学・体験も歓迎しています。<br>
+            まずはお気軽にお問い合わせください。
+        </p>
+        <div class="cta-group">
+            <a href="apply.html" class="btn btn-primary">参加を申し込む</a>
+            <a href="apply.html#question" class="btn">質問してみる</a>
         </div>
     </section>
 
@@ -42,8 +115,15 @@
                 <li><a href="apply.html">参加を申し込む</a></li>
             </ul>
         </nav>
+        <p class="footer-note">横浜市・神奈川県で活動する社会人バドミントンサークル</p>
         <p>&copy; 2026 Stella (ステラ)</p>
     </footer>
+
+    <!-- 画像拡大表示 -->
+    <div class="lightbox" id="lightbox" hidden>
+        <button class="lightbox-close" type="button" aria-label="閉じる">&times;</button>
+        <img src="" alt="">
+    </div>
 
     <script src="main.js"></script>
 </body>
